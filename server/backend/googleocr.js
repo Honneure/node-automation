@@ -1,8 +1,10 @@
 'use strict'
+// NE PAS OUBLIER DE METTRE LA VARIABLE D'ENVIRONNEMENT ! 
 const dataparser = require('./dataparser.js')
 const vision = require('node-cloud-vision-api')
 const path = require('path')
-vision.init({auth: 'AIzaSyAFPzGCFUzTJG653uKrNiwLVGGCbNUoH4s'})
+const google_auth = process.env.GOOGLE_VISION_AUTH;
+vision.init({auth: google_auth})
 
 
 const callOcrApi = (fileName, callback) => {

@@ -10,8 +10,6 @@ var gm = require('gm').subClass({imageMagick: true});
 var pdf2img = require('pdf2img');
 var request = require('request');
 var bodyParser = require('body-parser');
-const vision = require('node-cloud-vision-api')
-vision.init({auth: 'AIzaSyAFPzGCFUzTJG653uKrNiwLVGGCbNUoH4s'})
 // Convert PDF to PNG
 var convertPDFToPNG = require('./backend/convertpdf.js');
 // google vision API & parse data
